@@ -6,6 +6,8 @@ public class FollowPlayer : MonoBehaviour
 {
     public GameObject Player;
     
+    private Vector3 cameraOffset = new Vector3(-0.2f, 5, -8.11f);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Player.transform.position + new Vector3(-0.2f,5,-8.11f);
+        transform.position = Player.transform.position + cameraOffset;
     }
 }
